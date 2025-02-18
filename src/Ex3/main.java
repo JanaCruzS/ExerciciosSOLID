@@ -1,4 +1,7 @@
 package Ex3;
+
+import java.time.LocalDate;
+
 // Exercício 3: Gestão de Estoque de Produtos com Categorias
 //Variadas
 // Uma loja possui um estoque de produtos que inclui eletrônicos,
@@ -20,5 +23,19 @@ package Ex3;
 public class main {
     public static void main(String[] args) {
 
+ // cria um estoque
+
+ Estoque estoque = new Estoque();
+
+ // criando produtos
+        Eletronico ipad = new Eletronico("Ipad mini ",2500.00,30);
+        Roupas bermuda = new Roupas("bermuda", 90.00,"M","preta",false);
+        Alimento pao = new Alimento("pao", 7.89, LocalDate.of(2024, 3, 1));
+
+        estoque.adicionarProduto(ipad);
+        estoque.adicionarProduto(bermuda);
+        estoque.adicionarProduto(pao);
+
+        estoque.listarProdutos();
     }
 }
